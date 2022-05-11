@@ -1,0 +1,78 @@
+<% if (typeof links !== "undefined") { %>
+<div class="footer-links">
+	<div><% if (links[0]) { %><a href="<%- links[0] %>">前の記事へ</a><% } %></div>
+	<div><% if (links[1]) { %><a href="<%- links[1] %>">目次に戻る</a><% } %></div>
+	<div><% if (links[2]) { %><a href="<%- links[2] %>">次の記事へ</a><% } %></div>
+</div>
+<% } %>
+
+</div>
+<!--/#main-->
+
+<div id="sub">
+
+<!--PC用（801px以上端末）メニュー-->
+<nav id="menubar">
+<h2>Menu</h2>
+<ul>
+<li><a href="<%- PATH_BASE %>">HOME</a></li>
+<li><a href="<%- PATH_BASE %>contents.html">CONTENTS</a></li>
+<li><a href="<%- PATH_BASE %>link.html">LINK</a></li>
+</ul>
+</nav>
+
+<div class="side-profile">
+	<div class="side-profile-header">著者</div>
+	<div class="side-profile-container">
+		<div class="side-profile-left">
+			<img src="<%- PATH_BASE %>images/kumrnm.jpg" alt="蝙蝠の目">
+		</div>
+		<div class="side-profile-right">
+			<div class="side-profile-name">蝙蝠の目</div>
+			<div class="side-profile-links">
+				<a href="https://www.nicovideo.jp/user/119196563" target="_blank">niconico</a>
+				<a href="https://twitter.com/kumrnm" target="_blank">Twitter</a>
+				<a href="https://www.youtube.com/channel/UCz2-YTnMoW5vauT035WBO6A" target="_blank">YouTube</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+</div>
+<!--/#sub-->
+
+</div>
+<!--/#contents-->
+
+</div>
+<!--/#container-->
+
+<footer>
+<small>Copyright&copy; <%= new Date().getFullYear() %> <a href="https://twitter.com/kumrnm" target="_blank"><u>蝙蝠の目</u></a> All Rights Reserved.</small>
+<span class="pr"><a href="http://template-party.com/" target="_blank">《Web Design:Template-Party》</a></span>
+</footer>
+
+<!--小さな端末用（800px以下端末）メニュー-->
+<nav id="menubar-s">
+<ul>
+<li><a href="<%- PATH_BASE %>">HOME</a></li>
+<li><a href="<%- PATH_BASE %>contents.html">CONTENTS</a></li>
+<li><a href="<%- PATH_BASE %>link.html">LINK</a></li>
+</ul>
+</nav>
+
+<!--ページの上部に戻る「↑」ボタン-->
+<p class="nav-fix-pos-pagetop"><a href="#">↑</a></p>
+
+<!--メニュー開閉ボタン-->
+<div id="menubar_hdr" class="close"></div>
+
+<!--メニューの開閉処理条件設定　800px以下-->
+<script>
+if (OCwindowWidth() <= 800) {
+	open_close("menubar_hdr", "menubar-s");
+}
+</script>
+
+</body>
+</html>

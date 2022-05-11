@@ -1,0 +1,25 @@
+<%- include("../ejs/_header", { title: "数学記号など | SNNN数論" }) %>
+
+<h2>数学記号など</h2>
+
+<h3>$0$ の扱いについて</h3>
+<p>
+    自然数には $0$ を含む流儀と含まない流儀がある．本サイトでは，自然数は $0$ を含むものとする．特に，数列とは自然数から数への写像であるから，<strong>数列の初項は「第1項」ではなく「第0項」である</strong>点に注意されたい．
+</p>
+
+<h3>数学記号一覧</h3>
+
+<table class="ta1">
+    <tr><th>$\N$</th><td>自然数全体の集合</td></tr>
+    <tr><th>$\Z$</th><td>整数全体の集合</td></tr>
+    <tr><th>$\R$</th><td>実数全体の集合</td></tr>
+    <tr><th>$m\mid n$</th><td>$n$ は $m$ の倍数</td></tr>
+    <tr><th>$\gcd(m,n)$</th><td>$m$ と $n$ の最大公約数（Greatest Common Divisor）</td></tr>
+    <tr><th>$\lfloor x\rfloor$</th><td>$x$ 以下の最大の整数（床関数）</td></tr>
+    <tr><th>$\lceil x\rceil$</th><td>$x$ 以上の最小の整数（天井関数）</td></tr>
+    <tr><th>$\nu_m(n)$</th><td>整数 $n$ が $m$ で割り切れる回数</td></tr>
+    <tr><th>$\text{ord}_m(n)$</th><td>$m$ を法とする $n$ の<a href="https://en.wikipedia.org/wiki/Multiplicative_order">剰余位数</a></td></tr>
+    <tr><th>$\left(\frac{a}{p}\right)$</th><td>奇素数 $p$ を法とする<a href="https://ja.wikipedia.org/wiki/%E3%83%AB%E3%82%B8%E3%83%A3%E3%83%B3%E3%83%89%E3%83%AB%E8%A8%98%E5%8F%B7">ルジャンドル記号</a></td></tr>
+</table>
+
+<%- include("../ejs/_footer", { links: [null, "../contents.html", null] }) %>
