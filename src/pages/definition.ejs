@@ -2,7 +2,7 @@
 
 <h2>一般化SNNN数列の定義と一般項</h2>
 
-<h3>一般化SNNN数列の定義</h3>
+<h3 id="definition">一般化SNNN数列の定義</h3>
 
 <p>
     SNNN数を小さい順に並べた数列 $[3,37,377,3777,\cdots]$ を<strong>SNNN数列</strong>という．この数列はどのような式で表されるだろうか．ここで，隣接する項の関係を観察すると，あるSNNN数を10倍して7を加えることで次のSNNN数が得られることが分かる．つまり，SNNN数列は「初項 $3$ に関数 $f(x)=10x+7$ を繰り返し適用して得られる数列」であると言える．
@@ -11,10 +11,14 @@
     <span>ポイント</span>
     SNNN数列の第 $n$ 項は, 関数 $f(x)=10x+7$ を用いて $f^n(3)$ と表される.
 </p>
+<p class="attention">
+    <span>注意</span>
+    本サイトでは，$0$ は自然数であるという立場をとっているため，<strong>数列の初項は「第0項」である</strong>．
+</p>
 <p>
     さて，ここに現れた $10,7,3$ といった数は，我々が「10」進法で「7」と「3」からなる数を考えたことに由来する．これらの値は人間の文化的事情によるものであり，数学的本質には何ら影響しないと考えるのが自然であろう．したがってSNNN数論では，これら3つの値を任意の整数定数 $a,b,s$ とし，以下で定める<strong>一般化SNNN数列</strong>を考察の対象とする．
 </p>
-<p class="definition">
+<p class="definition" id="definition">
     <span>定義</span>
     整数 $a,b,s$ に対し，<strong>一般化SNNN数列</strong> $S_{a,b,s}$ を
     $$
@@ -31,18 +35,18 @@
 <p class="pb-less">
     以下に一般化SNNN数列の例を示す．$a,b,s$ の値として $0$ や負数も許すことに注意しよう．
 </p>
-<h5 class="example">例</h5>
+<h5 class="example" id="example">例</h5>
 <ol class="parentheses">
     <li>SNNN数列 $S_{10,7,3}=[3,37,377,3777,\cdots]$</li>
     <li>レピュニット数列 $S_{10,1,1}=[1,11,111,1111,\cdots]$</li>
     <li>ゆゆす数列 $S_{10,-16,4}=[4,24,224,2224,\cdots]$</li>
 </ol>
-<h5 class="exercise">演習問題</h5>
+<h5 class="exercise" id="exercise_S">演習問題</h5>
 <p class="pb-more">
     $S_{a,b,s}=[17,187,1887,18887,\cdots]$ となるような $a,b,s$ を求めよ．
 </p>
 
-<h3>一般化SNNN数列の一般項</h3>
+<h3 id="expression">一般化SNNN数列の一般項</h3>
 
 <p>
     一般化SNNN数列の一般項を求めるには，$f^n(x)$ の一般形が分かれば十分である．小さな $n$ について実験すると
@@ -67,7 +71,7 @@
     $$ S_{a,b,s}(n)=\frac{\{(a-1)s+b\}a^n-b}{a-1} $$
     と求められる．この式に現れる $(a-1)s+b$ は一般化SNNN数列にとって極めて重要な値であり，今後の議論にもしばしば現れる．この値を $S_{a,b,s}$ の<strong>判別式</strong>と呼び，記号 $D$ で表すものとする．
 </p>
-<p class="definition">
+<p class="definition" id="#definition_D">
     <span>定義</span>
     一般化SNNN数列 $S_{a,b,s}$ の<strong>判別式</strong> $D$ を
     $$ D \coloneqq (a-1)s+b $$
@@ -76,7 +80,7 @@
 <p>
     また，$a=1$ の場合の一般項の導出は容易である（省略）．ここまでの結果を定理として以下に記す．
 </p>
-<p class="theorem">
+<p class="theorem" id="theorem_expression">
     <span>定理</span>
     一般化SNNN数列 $S_{a,b,s}(n)$ の一般項は
     $$
@@ -86,7 +90,7 @@
     \end{cases}
     $$
 </p>
-<h5 class="exercise">演習問題</h5>
+<h5 class="exercise" id="exercise_D">演習問題</h5>
 <p class="pb-less">$a>0$ であるとき，次の命題を示せ（$a=1$ の場合に注意せよ）．</p>
 <ul class="disc">
     <li>$D>0 \iff S_{a,b,s}(n)$ は単調増加</li>

@@ -2,22 +2,22 @@
 
 <h2>位数定理</h2>
 <p class="pb-more">
-    <a href="prime_power_1">前回の記事</a>で，一般化SNNN数列 $S_{a,b,s}$ の項が素数 $p$ で何回割り切れるかという問題を，$a$ の素因数に限って考察した．それでは，$a$ と互いに素な素数 $p$ についてはどうなるだろうか，というのは自然な問いである．<a href="period.html#cycle_theorem">巡回定理</a>において，$S_{a,b,s}$ が $p$ で割り切れる周期は位数 $\ord_p(a)$ を用いて記述された．このことから，$p^k$（$k$ は正整数）で割り切れる周期に関して $\ord_{p^k}(a)$ が重要な役割を果たすことは容易に予想されよう．本記事では，素数の冪乗を法とする位数に関する重要な定理である<strong>位数定理</strong>の証明を行う．
+    <a href="prime_power_1">前回の記事</a>で，一般化SNNN数列 $S_{a,b,s}$ の項が素数 $p$ で何回割り切れるかという問題を，$a$ の素因数に限って考察した．それでは，$a$ と互いに素な素数 $p$ についてはどうなるだろうか，というのは自然な問いである．<a href="period.html#theorem_cycle">巡回定理</a>において，$S_{a,b,s}$ が $p$ で割り切れる周期は位数 $\ord_p(a)$ を用いて記述された．このことから，$p^k$（$k$ は正整数）で割り切れる周期に関して $\ord_{p^k}(a)$ が重要な役割を果たすことは容易に予想されよう．本記事では，素数の冪乗を法とする位数に関する重要な定理である<strong>位数定理</strong>の証明を行う．
 </p>
 
-<h3>Wieferich Rank</h3>
+<h3 id="W">Wieferich Rank</h3>
 <p>
     まず，位数定理の記述に必要な概念である <strong>Wieferich Rank</strong> を導入する．
 </p>
-<p class="definition pb-less">
+<p class="definition pb-less" id="definition_W">
     <span>定義</span>
     整数 $a$ を底とする素数 $p$ の <strong>Wieferich Rank</strong> $W_p(a)$ を
     $$
         W_p(a) \coloneqq \nu_p(a^{p-1}-1)
     $$
-    で定める（$\nu_p$ の定義は<a href="prime_power_1.html#nu">こちら</a>）．
+    で定める（$\nu_p$ の定義は<a href="prime_power_1.html#definition_nu">こちら</a>）．
 </p>
-<h5 class="example">例</h5>
+<h5 class="example" id="example_W">例</h5>
 <p class="pb-more">
     $W_3(10)=2,$
     $W_7(10)=1,$
@@ -31,14 +31,14 @@
 </p>
 
 <h3 id="order_theorem">位数定理</h3>
-<p class="theorem pb-less">
+<p class="theorem pb-less" id="theorem">
     <span>位数定理</span>
-    $p$ を素数，$k$ を正整数, $a$ を $p$ と互いに素な奇素数とする．このとき，
+    $p$ を奇素数，$k$ を正整数, $a$ を $p$ と互いに素な整数とする．このとき，
     $$
         \ord_{p^k}(a) = p^{\max(0, k-W_p(a))} \cdot \ord_p(a).
     $$
 </p>
-<h5 class="example">例</h5>
+<h5 class="example" id="example">例</h5>
 <p class="pb-more">
     $\ord_{3}(10)=1, W_3(10)=2$ より
     $\ord_{3^2}(10) = 3^0 \cdot 1 = 1,$
@@ -50,10 +50,10 @@
     以下，この定理の証明を行う．この証明は群論を用いており，高校数学の範囲を逸脱するものである．難解であると感じる読者は，定理の主張のみを認めて次の記事に進んでも差し支えない．
 </p>
 <p class="pb-less">
-    まず，本記事のみで用いる記法として，次の2点を約束する．
+    まず，次の記法を約束する．
 </p>
 <ul class="disc pb-less">
-    <li>加法群 $\Z/m\Z$ や乗法群 $(\Z/m\Z)^\times$ の元について，$n\in\Z$ の同値類は本来 $[n]$ や $\bar{n}$ などと表記すべきであるが，これを省略して単に $n$ と表記する．</li>
+    <li>加法群 $\Z/m\Z$ や乗法群 $(\Z/m\Z)^\times$ の元について，$n\in\Z$ の合同類は本来 $[n]$ や $\bar{n}$ などと表記すべきであるが，これを省略して単に $n$ と表記する．</li>
     <li>一般の群 $G$ における $x\in G$ の位数を $\ord_G(x)$ と表記する．すなわち $\ord_m(n)=\ord_{(\Z/m\Z)^\times}(n)$.</li>
 </ul>
 <p>
@@ -92,7 +92,7 @@
 <p>
     ここで次の補題を用いる．
 </p>
-<p class="theorem pb-less">
+<p class="theorem pb-less" id="lemma">
     <span>補題</span>
     $p$ を素数, $k$ を自然数，$n$ を整数とする．このとき，
     $$

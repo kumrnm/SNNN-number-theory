@@ -5,7 +5,7 @@
 <p>
     <a href="period.html">前回の記事</a>で証明した巡回定理の応用として，SNNN数の素因数（<strong>SNNN素因数</strong>）が無数に存在することを証明しよう．本記事ではSNNN数列 $S_{10,7,3}$ を $S$ と表記する．
 </p>
-<p class="theorem pb-less">
+<p class="theorem pb-less" id="lemma">
     <span>補題</span>
     $n$ を自然数，$p$ を $10$ と互いに素な素数とする．このとき，
     $$ n\equiv -1\enspace(\text{mod }u_p) \implies S(n)\nequiv 0\enspace(\text{mod }p). $$
@@ -36,7 +36,7 @@
 <p class="pb-more">
     $D\,(=34)$ の約数，すなわち $p=17$ が該当する．このとき $S(u_p-1)\equiv S(0)\equiv 3\nequiv 0\mod{17}$．$\blacksquare$
 </p>
-<p class="theorem pb-less">
+<p class="theorem pb-less" id="theorem">
     <span>定理</span>
     SNNN素因数は無数に存在する．
 </p>
@@ -56,7 +56,7 @@
 <p>
     この証明はSNNN数列 $S_{10,7,3}$ に特有のものであり，一般の $S_{a,b,s}$ に適用できるものではない．一方で，「素因数が無数に存在する」という性質そのものは，ほとんど全ての一般化SNNN数列において成り立つことが知られている．この事実は<strong>SNNN素因数定理</strong>と呼ばれ，その証明には本記事と全く異なるアプローチを要する．
 </p>
-<h4 class="exercise">演習問題</h4>
+<h4 class="exercise" id="exercise">演習問題</h4>
 <p>
     一般化SNNN数列 $S_{10,7,s}$ が上記の補題を満たさないような $s$ を1つ求めよ．
 </p>

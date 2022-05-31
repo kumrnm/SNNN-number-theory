@@ -28,15 +28,15 @@
     などのような周期性が見られる．以下では，このような現象について一般的に考察する．
 </p>
 
-<h3>周期の定義と性質</h3>
-<p class="definition pb-less">
+<h3 id="period">周期の定義と性質</h3>
+<p class="definition pb-less" id="definition_period">
     <span>定義</span>
     一般化SNNN数列 $S$ と整数 $z$ が与えられたとき，整数 $u$ が
     $$ m\equiv n\mod{u} \implies S(m)\equiv S(n)\mod{z} $$
     を満たすならば，$u$ は $z$ を法とする $S$ の<strong>周期</strong>であるという．<br />
     $z$ を法とする正の周期のうち最小のものを<strong>基本周期</strong>といい，$u_z$ で表す．
 </p>
-<h5 class="example">例</h5>
+<h5 class="example" id="example_period">例</h5>
 <ul class="disc">
     <li>3 を法とするSNNN数列 $S_{10,7,3}$ の周期は $0,\pm3,\pm6,\cdots$, 基本周期は $3$.</li>
     <li>5 を法とするSNNN数列 $S_{10,7,3}$ の周期は $0$ のみである（確認せよ）．ゆえに基本周期は存在しない．</li>
@@ -49,7 +49,7 @@
 <p>
     次の補題は，一般化SNNN数列の周期を求めるうえで有用である．
 </p>
-<p class="theorem pb-less">
+<p class="theorem pb-less" id="lemma_period">
     <span>補題</span>
     $S$ を一般化SNNN数列，$z$ を整数，$u$ を<strong>非負</strong>整数とする．このとき，次の2条件は同値である．<br />
     (1)&ensp;$u$ は $z$ を法とする $S$ の周期<br />
@@ -62,7 +62,7 @@
 <p>
     この補題から，次の定理が導かれる．
 </p>
-<p class="theorem pb-less">
+<p class="theorem pb-less" id="theorem_period">
     <span>定理</span>
     一般化SNNN数列 $S$ が $z$ を法とする基本周期 $u_z$ をもつならば
     $$ m\equiv n\mod{u_z} \iff S(m)\equiv S(n)\mod{z}. $$
@@ -81,7 +81,7 @@
     となる．よって補題より $m'-n'$ は $S$ の周期であるが，これは $u_z$ の最小性に反する．したがって $S(m)\nequiv S(n)$．$\blacksquare$
 </p>
 
-<h3>一般化SNNN数列の基本周期 $u_p$</h3>
+<h3 id="u_p">一般化SNNN数列の基本周期 $u_p$</h3>
 
 <p class="pb-less">
 この節の合同式の法は全て素数 $p$ とする．補題より，一般化SNNN数列 $S$ の基本周期 $u_p$ は，合同方程式 $S(u)\equiv S(0)$ の最小の正の解である．さて，<a href="definition.html">前回の記事</a>で一般化SNNN数列の一般項を求めたが，これと全く同様にして合同式としての一般項
@@ -108,7 +108,7 @@ $$
     $D\equiv 0$ であれば任意の $u$ が解である．よって最小の正の解は $u_p=1$．$D\nequiv 0$ の場合は方程式 $a^u\equiv 1$ を解けばよい．ここで $a\nequiv 0$ であれば，正の解が必ず存在する（例えば，<a href="https://ja.wikipedia.org/wiki/%E3%83%95%E3%82%A7%E3%83%AB%E3%83%9E%E3%83%BC%E3%81%AE%E5%B0%8F%E5%AE%9A%E7%90%86">フェルマーの小定理</a> $a^{p-1}\equiv 1$ より解 $u=p-1$ を得る）．その中で最小のものを，$p$ を法とする $a$ の<a href="https://manabitimes.jp/math/905"><strong>位数</strong></a>といい，$\ord_p(a)$ で表す．すなわち $u_p=\ord_p(a)$．一方，$a\equiv 0$ の場合に解が存在しないことは明らかである．
 </p>
 <h4>$a\equiv 1$ の場合</h4>
-<p class="pb-more">
+<p>
     $$
     \begin{align*}
     S(u) &\equiv S(0) \\
@@ -118,8 +118,12 @@ $$
     $$
     $b\equiv 0$ であれば任意の $u$ が解である．よって最小の正の解は $u_p=1$．$b\nequiv 0$ の場合の解は $u\equiv 0$ すなわち $p$ の倍数全体であるから，最小の正の解は $u_p=p$．
 </p>
+<p class="attention pb-more">
+    <span>注意</span>
+    上の議論で「$xy\equiv 0$ ならば $x\equiv 0$ または $y\equiv 0$」という性質を用いているが，この性質は<strong>法が合成数でない場合に限って</strong>成立する．
+</p>
 
-<h3>巡回定理</h3>
+<h3 id="cycle_theorem">巡回定理</h3>
 <p class="pb-less">
     以上の結果をまとめたものが，以下に記す<strong>巡回定理</strong>である．ただし，合同式で表される各種条件について，次の言い換えを用いていることに注意せよ．
 </p>
@@ -128,7 +132,7 @@ $$
     <li>$x\nequiv 0\mod{p} \iff x$ は $p$ と互いに素</li>
     <li>$a\equiv 1$ ならば $D\equiv b$</li>
 </ul>
-<p class="theorem" id="cycle_theorem">
+<p class="theorem" id="theorem_cycle">
     <span>巡回定理</span>
     $S_{a,b,s}$ を一般化SNNN数列，$p$ を $a$ と互いに素な素数とする．このとき，
     $$ m\equiv n\mod{u_p} \iff S_{a,b,s}(m)\equiv S_{a,b,s}(n)\mod{p}. $$

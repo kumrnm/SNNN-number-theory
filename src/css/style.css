@@ -645,6 +645,22 @@ p.theorem > *:first-child { background-color: #4af; }
 p.point { border-color: #f89030; }
 p.point > *:first-child { background-color: #f89030; }
 
+/* 注意 */
+p.attention {
+	border-radius: 6px;
+	padding-bottom: 0 !important;
+	margin: 0 6px 20px;
+	background-color: #ffe8e8;
+}
+p.attention.pb-more {
+	margin-bottom: 30px;
+}
+p.attention > *:first-child {
+	font-weight: bold;
+	color: #c33;
+	display: block;
+}
+
 /* 括弧箇条書き */
 ol.parentheses {
 	padding-left: 20px;
