@@ -150,12 +150,11 @@
     \begin{align}
     u_{p^k}=\begin{cases}
         1 & \text{if }k\le \nu_p(D)-\nu_p(a-1)+\nu_2(p) \\
-        2^{\max(0,k-\~k_2)}\cdot\ord_4(a) & \text{if }k\gt \nu_p(D)-\nu_p(a-1)+\nu_2(p)\text{ and }p=2 \\
-        p^{\max(0,k-\~k_p)}\cdot\ord_p(a) & \text{otherwise} \\
+        p^{\max(0,k-\~k_p)}\cdot\ord_{p^{1+\nu_2(p)}}(a) & \text{otherwise} \\
     \end{cases}
     \end{align}
     $$
-    を持つことを明らかにした．また，<a href="period.html#theorem_period">基本周期の性質</a>は，$S$ 上の連続した $u_{p^k}$ 項に $p^k$ の倍数は高々1個しか存在しないことを主張する．このことから，<strong>$S(0)$ から $S(n-1)$ までの連続した $n$ 項には $p^k$ の倍数が高々 $\lceil\frac{n}{u_{p^k}}\rceil$ 個しか存在しない</strong>ことが導かれる．ゆえに
+    を持つことを明らかにした（$\nu_2(p)$ を用いて一つの式にまとめている）．また，<a href="period.html#theorem_period">基本周期の性質</a>は，$S$ 上の連続した $u_{p^k}$ 項に $p^k$ の倍数は高々1個しか存在しないことを主張する．このことから，<strong>$S(0)$ から $S(n-1)$ までの連続した $n$ 項には $p^k$ の倍数が高々 $\lceil\frac{n}{u_{p^k}}\rceil$ 個しか存在しない</strong>ことが導かれる．ゆえに
     $$
     \bar\psi_p(n) \le \sum_{k=1}^{\infty} \lceil\frac{n}{u_{p^k}}\rceil
     $$
