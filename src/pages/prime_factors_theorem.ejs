@@ -73,7 +73,7 @@
     まず，$a\lt -1$ である場合を考える．このとき $S$ は「初項 $s$ に関数 $f(x)=ax+b$ を繰り返し適用した数列」である．ここで「初項 $s$ に関数 $f^2(x)=a^2x+(a+1)b$ を繰り返し適用した数列」$S'$ を考えると，$S'$ は一般化SNNN数列 $S_{a^2,(a+1)b,s}$ であり，なおかつ $S$ の部分列である．したがって，この $S'$ を新たに $S=S_{a,b,s}$ とおけば，<strong>一般性を失わずに $a\gt 1$ を仮定する</strong>ことができる．
 </p>
 <p>
-    いま，$a\gt 1$ であり，さらに定理の仮定より $D\neq 0$ であるから，$S$ は単調増加または単調減少のいずれかである（<a href="definition.html#exercise_D">初回の演習問題</a>を参照）．単調減少である場合には，全ての項を $-1$ 倍した一般化SNNN数列 $S_{a,-b,-s}$ を新たに $S=S_{a,b,s}$ とおくことで，<strong>一般性を失わずに $S$ が単調増加である（すなわち $D\gt 0$）と仮定する</strong>（これは元の数列の部分列ではないが，明らかに素因数の集合を保存している）．このとき，十分大きな自然数 $N$ をとれば，$S(N)$ より先の全ての項が正である．この部分 $S_{a,b,S(N)}$ を新たに $S=S_{a,b,s}$ とおくことで，<strong>一般性を失わずに $S$ の全ての項が正であると仮定する</strong>．
+    いま，$a\gt 1$ であり，さらに定理の仮定より $D\neq 0$ であるから，$S$ は単調増加または単調減少のいずれかである（<a href="definition.html#exercise_D">初回の演習問題</a>を参照）．単調減少である場合には，全ての項を $-1$ 倍した一般化SNNN数列 $S_{a,-b,-s}$ を新たに $S=S_{a,b,s}$ とおくことで，<strong>一般性を失わずに $S$ が単調増加である（すなわち $D\gt 0$）と仮定する</strong>（これは元の数列の部分列ではないが，明らかに素因数の集合を保存している）．このとき，十分大きな自然数 $N$ をとれば，$S(N)$ 以降の項が全て正となる．この部分 $S_{a,b,S(N)}$ を新たに $S=S_{a,b,s}$ とおくことで，<strong>一般性を失わずに $S$ の全ての項が正であると仮定する</strong>．
 </p>
 <p class="pb-more">
     なお，以上の一連の変換において，定理の仮定 $b\neq 0$ が保存されていることに注意しよう．
@@ -81,7 +81,7 @@
 
 <h3 id="psi">$\psi$ の下界</h3>
 <p class="pb-more">
-    仮定 $a\gt 1$ と $s=S(0)\gt 0$ より $D=(a-1)s+b\gt b$ である．このことに注意し，<a href="definition.html#theorem_expression">一般化SNNN数列の一般項</a>を用いてSNNN対数和 $\psi$ を計算すると
+    仮定 $a\gt 1$ と $s=S(0)\gt 0$ より $D=(a-1)s+b\gt b$ である．このことに注意し，<a href="definition.html#theorem_expression">一般化SNNN数列の一般項</a>を用いて $S$ のSNNN対数和 $\psi$ を計算すると
     $$
     \begin{align*}
     \psi(n)
@@ -219,4 +219,4 @@
     が導かれ，矛盾が生じる．よって $P_S$ は無限集合である．
 </p>
 
-<%- include("../ejs/_footer", { links: ["p2.html", "../contents.html", ""] }) %>
+<%- include("../ejs/_footer", { links: ["p2.html", "../contents.html", "prime_factors_complement.html"] }) %>
